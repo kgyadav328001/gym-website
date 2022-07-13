@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry gym</title>
+</head>
+<!-- hamne es website ke liye baloo bhai font ka use kiya hai from google fonts ye uska link hai  -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+<link rel="stylesheet" href=".css">
+
+<style>
+    /* CSS Reset */
+    body {
+        /* hum baloo bhai font ka use pure web page me karna chahte hai es liye hum us font ko yaha style ke body css me dall denge  */
+        font-family: 'Baloo Bhai 2', cursive;
+        color: white;
+        /*color white es liye add kiya bcj apne home page ke pic ka background black hai*/
+        margin: 0px;
+        padding: 0px;
+        background: url('img/gym girl.jpg');
+        /*ye url eek function hai css me background ke sath use karne se back me image de dega*/
+    }
+
+    .left {
+        display: inline-block;
+        /*display inline block karne se app baad me width bagera bhi set kar skte hoo*/
+        /* border: 2px solid red; */
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        /* bottom: 0px; */
+        border-radius: 3px;
+        ]
+    }
+
+    .left img {
+        width: 150px;
+        padding: 3px;
+        height: 100px;
+        /* border-radius: 3px; */
+        /* filter: invert(100%); */
+        /*ye filter invert function apki image agar kali hai tho white kaar dega ,white hai tho black kar dega*/
+
+    }
+
+    .left div {
+        line-height: 2px;
+        font-size: 26px;
+        text-align: center;
+        /* border-radius: 12px; */
+    }
+
+    .mid {
+        display: block;
+        width: 49%;
+        margin: 20px auto;
+        /*kisi bhi elemtn ko center me lane ke liye hum margin auto lagange ,ye 12px top yani y axis me lagya hai*/
+        /* border: 2px solid rgb(166, 255, 0); */
+
+    }
+
+    .right {
+        position: absolute;
+        /*position absolute jo hai vo releted to parent set ho jata hai ,yaha abhi eska parent header hai*/
+        right: 10px;
+        top: 30px;
+        display: inline-block;
+        /* border: 2px solid rgb(246, 255, 168); */
+
+
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        /*li ke liye display inline block karne se element line me aa jate hai */
+        font-size: 25px;
+    }
+
+    /* navbar ke li ke anchor element ke color ko white karne ke liye */
+    .navbar li a {
+        color: white;
+        /* abhi home ,contact us ,fitness calcu about us per white line aa rahi hai use uthane ke liye hum */
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+
+    /* a per hover kare ya a me jiski class active hai  */
+    .navbar li a:hover,
+    .navbar li a.active {
+        /* text-decoration :none se hum underline hatathe hai usi tarha hum text decoration underline se use laga skte hai */
+
+        text-decoration: underline;
+        /*active vale home per underline permanent dikhayega  usi tarah baki a valo per hower karne per hi underline dikahyega*/
+        color:grey
+    }
+
+    /* now we are going to give css to buttons that are form for call us and email us  */
+    .btn {
+        font-family: 'Baloo Bhai 2', cursive;
+        /*baloo bhai font ne btn ka font change nahi kiya tha bcj ye btn pahle se default use kar rahatha */
+
+        margin: 0px 9px;
+        /*top se margin dene ki jarurat nahi hai tho hmne sirf horizantlly margin diya*/
+        background-color: black;
+        color: #15c1bd;
+        padding: 4px 14px;
+        /*padding me bhi pahla vala verticl ke liye hota hai dusra vala horizantal ke corddinate hote hai this is simmillar like margin have */
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        /*ye cursor ko jese hi hum btn callus and email us per le jayenge ye humko hath (pointer) dikha dega*/
+
+    }
+
+    .btn:hover {
+        background-color: rgb(89, 61, 61);
+        /*hamne text decoration na laga kar hover  me background color lagya hai */
+        /* text-decoration underline lagate tho ye hamko btn per hower karne per underline de deta  */
+    }
+
+    .container {
+        border: 2px solid white;
+        /* text-align: center; */
+        margin: 106px 80px;
+        padding: 7px;
+        width: 43%;
+        border-radius: 28px;
+
+    }
+
+    .form-group input {
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+
+    }
+    .container h1{
+        text-align: center;
+        color: orangered;
+    }
+    .container button{
+        display: block;
+        width: 520px;
+        margin: 50px auto;
+
+
+    }
+    .header h5{
+        position: relative;
+        left: 3px;
+        bottom: 35px;
+        
+        
+    }
+</style>
+
+<body>
+    <!-- header me header hi class ka namm diya  -->
+    <header class="header">
+        <!-- es pure header me hum 3 div banane vale hai -->
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/dumble pic.jpg" alt="">
+            <div><h5>Aspire Gym</h5></div>
+            <!-- abhi kafffi bekar lag raha becj ye dumble pic ,girl pic per overlapp ho rha hai so we have to target it from class left using css -->
+
+        </div>
+        <!-- mid box for nav bar -->
+        <div class="mid">
+            <ul class="navbar">
+                <!-- home me class active karne ka matlab home kuch alag se dikhe -->
+                <li><a href="#" class="active">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">fitness calculator</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+        </div>
+        <!-- right box for button -->
+        <div class="right">
+            <button class="btn">Call Us Now</button><button class="btn">Email Us </button>
+
+        </div>
+    </header>
+    <!-- ye container hamne form ke liye banya hai -->
+    <div class="container">
+        <h1>Join the best gym of Dellhi now</h1>
+        <!-- noaction.php is not an protocall means if u are not using backend then u have to write it  -->
+        <form action="noaction.php">
+            <!--we have no backend  for storing information from user so/ ther is no use of acton -->
+            <!-- esne id ki jagha placeholder diya hai placeholder is just type of bracket nothing else  -->
+            <!-- app placeholder ka colur bhi badal skte hoo by using css kyoki plceholder bhi ek id ki tarah hai  -->
+
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your name" </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Age" </div>
+                    <div class="form-group">
+                        <input type="text" name="" placeholder="Enter your Gender" </div>
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter your Phone number" </div>
+                            <button class="btn">Submit</button>
+
+                            <!-- form ke ander hi ek hamko submit karne ke liye button banana padeyga  -->
+        </form>
+    </div>
+</body>
+
+</html>
